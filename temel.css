@@ -1,0 +1,670 @@
+
+
+/* ? Basic Html Codes */
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden; 
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--main-color);
+
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+    background-color: #fff;
+}
+html::-webkit-scrollbar-thumb{
+    border-radius: 3rem;
+    background-color: var(--black-color);
+}
+html::-webkit-scrollbar-track{
+    background-color: var(--main-color);
+}
+
+
+
+/* ? Header Start */
+
+.header .logo2 img{
+    height: 10rem;
+    /* Diğer türlü verilmiyor (img yazılmadan--Ders başlaa) */
+}
+.header{
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding:0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 1500;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .buttons button{
+    /* cursor: pointer; */
+    font-size: 2.5rem;
+    margin-left: 2.5rem;
+    background-color: transparent; /* Arkayı Temizler YA DA Beyaz yapar */
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+
+/* todo: Mini Ressponsive */
+
+
+
+.header .cart-items-container{
+    position: absolute;
+    top: 95%;
+    height: calc(100vh - 9rem);
+    width: 35rem;
+    background-color: #fff;
+    box-shadow: 0px 20px 14px 0px rgba(0 0 0 / 75%,);
+    right: -100%;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black-color);
+    padding-bottom: 0.5rem;
+}
+
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+    border-radius: unset;
+    background-color: black;
+    color: red;
+    border: 0.2rem solid red;
+}
+
+/* todo: Mini Ressponsive End */
+
+
+
+
+/* ? Header End */
+
+
+/* ! Home Section Start */
+
+.home{
+    min-height: 100vh;
+    background: url(../Project-Restaurant/Restourant-İmages/home-pizza.jpg)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.home .content{
+    max-width: 60rem;
+
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ccc;
+}
+
+
+/* ! Home Section End */
+
+/* ! Menu Section Start */
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.menu .box-container .box{
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 3rem;
+    min-height: 58rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+}
+.menu .box-container .box .menu-category{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.menu .box-container .box h3{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+.menu .box-container .box .price{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+.menu .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;
+
+}
+
+/* ! Menu Section End */
+
+
+/* todo Products Section Start */
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box{
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    height: 60rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+
+.products .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 20;
+}
+
+.products .box-container .box .box-head .title{
+    font-size: 1.4rem;
+
+}
+
+.products .box-container .box .box-head .name{
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+
+.products .box-container .dark-bg .box-head .name
+.products .box-container .dark-bg .box-head .title{
+    color: #fff;
+
+}
+
+.products .box-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 3rem;
+
+}
+
+.products .box-container .dark-bg img{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: unset;
+}
+
+.products .box-container .box-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.products .box-container .box-bottom .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.products .box-container .box-bottom .info .price{
+    font-size: 3rem;
+}
+.products .box-container .box-bottom .info .amount{
+    font-size: 1.4rem;
+}
+
+.products .box-container .dark-bg .box-bottom .info .price,
+.products .box-container .dark-bg .box-bottom .info .amount{
+    color: #fff;
+}
+
+.products .box-container .box-bottom .product-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 0.2rem solid var(--main-color);
+}
+
+.products .box-container .box-bottom .product-btn a i{
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.products .box-container .dark-bg .box-bottom .product-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    border: 0.2rem solid var(--main-color);
+}
+
+.products .box-container .dark-bg .box-bottom .product-btn a i{
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+
+/* todo Products Section End */
+
+
+/* * About Start */
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: #fff;
+}
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem;
+    line-height: 1.8;
+}
+
+
+/* * About End */
+
+
+/* ! Review Start */
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    border: var(--border);
+    background-color: #fff;
+    text-align: center;
+    border-radius: 3rem;
+    padding: 3rem 2rem;
+}
+
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding: 2rem 0;
+}
+
+.review .box-container .box .user{
+    width: 11rem;
+    height: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review .box-container .box h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--main-color); 
+}
+.review .box-container .box .starts i{
+    font-size: 1.8rem;
+    color: gold;
+}
+/* ! Review End */
+
+
+/* ? Row Start */
+
+.contact .row{
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background-color: var(--black-color);
+}
+.contact .row .map{
+    width: 100%;
+    flex: 1 1 45rem;
+    object-fit: cover;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contact .row form .inputbox{
+    display: flex;
+    justify-content:center; /* Alan yok*/
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+}
+
+.contact .row form .inputbox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.8rem;
+    text-transform: none;
+    color: rgb(198, 189, 189); 
+    background-color: transparent;
+    background: none;
+    /* * Aynılar none-transparent -- AMA diğerleri çalışmıyor */
+}
+
+.contact .row form .inputbox i{
+    color: #fff;
+    padding-left: 2rem;
+    font-size: 2rem;
+}
+
+.contact .row form .btn{
+    color: red;
+    background-color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+.contact .row form .btn:hover{
+    background-color: var(--black-color);
+    opacity: 0.92;
+}
+
+.contact .row form .inputbox{
+    display: flex;
+    /* *Bir az yarayacaktır(içerisindeki-2-)
+
+    * Flex Yapısı Gereği Ama justify-align.. işe yarar*/
+}
+
+
+/* ? Row End */
+
+
+/* ! Blog Start */
+
+.blog .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.7rem;
+}
+
+.blog .box-container .box{
+    background-color: #fff;
+    border-radius: 3rem;
+}
+
+.blog .box-container .box .image{
+    height: 25rem;
+    overflow:hidden; /* Sığmayanı Gizle */
+    width: 100%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.blog .box-container .box .image img{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+
+}
+.blog .box-container .box:hover .image img{
+    transform:scale(1.12);
+
+}
+
+.blog .box-container .box .content{
+    padding: 2rem;
+}
+
+.blog .box-container .box .content span{
+    display: block;
+    padding-top: 1rem;
+    font-size: 2.1rem;
+}
+
+.blog .box-container .box .content .title{
+    font-size: 2.6rem;
+    line-height: 1.5;
+}
+
+.blog .box-container .box .content p{
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: rgb(163, 141, 141);
+}
+
+
+/* ! Blog End */
+
+
+/* * Footer  Start */
+
+.footer{
+    background:var(--black-color);
+    text-align: center;
+
+
+}
+
+
+/* .footer .search{
+    display: flex; display problemli çalışıyor
+    justify-content: center;
+} */
+
+
+.footer .search .search-input{
+    width: 30rem;
+    height: 5rem;
+
+}
+
+
+.footer .share{
+    padding: 2rem 0;
+}
+
+.footer .share a{
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 5rem;
+    /*Yukrarısı önemli*/
+    border: var(--border);
+    border-radius: 3rem;
+    margin: 1rem;
+}
+
+.footer .share .fa-google{
+    margin-left: 7rem;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+    font-size: 2.12rem;
+}
+
+.footer .search .btn-primary{
+    background-color: var(--main-color);
+    color: #fff;
+    margin-left: 1rem;
+    padding: 1.1rem;
+    width: 12rem;
+} 
+
+.footer .search .btn-primary:hover{
+    opacity: 0.9;
+    padding: 1.2rem;
+}
+
+
+.footer .links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer .links a{
+    background-color:var(--main-color);
+    padding: 0.7rem 2rem;
+    color: #fff;
+    font-size: 2rem;
+    border: var(--border);
+
+}
+.footer .links a:hover{
+    background-color: var(--black-color);
+    opacity: 0.72; 
+}
+.footer .links a.active{
+    background-color: var(--black-color);
+
+}
+.omer{
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+    padding: 3rem;
+}
+.omer span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/* Extra Land*/
+
+#facebook:hover{
+    background-color: #1877F2;
+    color: #fff;
+}
+#instagram:hover{
+    background-color: #F20166;
+}
+#twitter:hover{
+    background-color: #1D9BF0;
+}
+#linkedin:hover{
+    background-color: #0077B5;
+}
+#amazon:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    color: coral;
+}
+
+/* Extra Land*/
+
+/* * Footer  End */
+
+
+
