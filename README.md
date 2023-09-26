@@ -2,4 +2,5 @@
 "JavaScript"
 "Css"
 "HTML"
-https://github.com/FarukUrganci/Restaurant-WithJavaScript.git
+"https://github.com/FarukUrganci/Restaurant-WithJavaScript.git"
+"
